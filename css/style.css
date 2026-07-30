@@ -249,6 +249,60 @@ textarea {
 
 /* === footer === */
 
+.footer {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	border: 3px solid var(--fg);
+	border-radius: var(--radius);
+
+	margin: 2rem;
+	margin-top: auto;
+}
+
+.footer-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+	font-style: normal;
+}
+
+.footer-info a {
+	width: fit-content;
+	color: var(--card-fg);
+}
+
+.footer .button {
+	background-color: var(--accent);
+}
+
+.footer .button:hover {
+	text-decoration: none;
+}
+
+.footer-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+	grid-column: span 2;
+	width: 100%;
+	text-align: center;
+	opacity: 0.7;
+	font-size: 0.75rem;
+}
+
+@media (width < 420px) {
+	.footer {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 /* === home-banner === */
 
 /* === home-galeria === */

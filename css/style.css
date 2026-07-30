@@ -70,12 +70,14 @@ a:hover {
 button,
 input,
 textarea,
-select {
+select,
+.button {
 	font-family: inherit;
 	font-size: inherit;
 }
 
-button {
+button,
+.button {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -96,17 +98,20 @@ button {
 		box-shadow 0.15s;
 }
 
-button:hover {
+button:hover,
+.button:hover {
 	transform: translate(var(--shadow-x), var(--shadow-y));
 	box-shadow: none;
 }
 
-button:focus-visible {
+button:focus-visible,
+.button:focus-visible {
 	outline: 2px solid var(--primary);
 	outline-offset: 2px;
 }
 
-button:disabled {
+button:disabled,
+.button:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 	pointer-events: none;
@@ -179,6 +184,67 @@ textarea {
 }
 
 /* === header === */
+
+.navbar {
+	position: sticky;
+	top: 2rem;
+	margin: 0 2rem 4rem 2rem;
+
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--fg);
+	text-decoration: none;
+}
+
+.logo:hover {
+	color: var(--accent);
+	text-decoration: none;
+	stroke: var(--accent);
+}
+
+.navbar nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+}
+
+.navbar .button {
+	display: block;
+	padding: 0.5rem 1rem;
+	background-color: var(--bg);
+	color: var(--fg);
+	text-align: center;
+}
+
+.navbar .button:hover {
+	text-decoration: none;
+}
+
+.navbar .button.active {
+	background-color: var(--secondary);
+}
+
+@media (width < 680px) {
+	.navbar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.navbar nav ul {
+		flex-direction: column;
+	}
+}
 
 /* === footer === */
 

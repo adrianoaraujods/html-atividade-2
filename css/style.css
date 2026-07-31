@@ -253,6 +253,89 @@ header {
   }
 }
 
+/* === hero section === */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 28rem;
+  border: 3px solid var(--fg);
+  border-radius: var(--radius);
+  background-color: var(--secondary);
+  padding: clamp(2rem, 6vw, 5rem);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.hero-eyebrow,
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  max-width: 10ch;
+}
+
+.hero-description {
+  max-width: 52ch;
+  font-size: 1.125rem;
+}
+
+.hero-visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 3px solid var(--fg);
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--primary-fg);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 700;
+}
+
+.logo-hero {
+	display: grid;
+	place-items: center;
+	justify-self: center;
+	margin: 0;
+}
+
+.logo-hero svg {
+	width: clamp(9rem, 15vw, 14rem);
+	height: auto;
+}
+
+.botao-hero {
+  margin: 0;
+}
+
+.botao-hero .button {
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 720px) {
+  .hero .hero-visual{
+    display: none;
+  } 
+  .hero-visual .logo-hero {
+    display: none;
+  }
+}
+
 /* === footer === */
 
 .footer {
@@ -335,57 +418,6 @@ a.button:hover {
   border: 3px solid var(--fg);
   border-radius: var(--radius);
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  min-height: 28rem;
-  border: 3px solid var(--fg);
-  border-radius: var(--radius);
-  background-color: var(--secondary);
-  padding: clamp(2rem, 6vw, 5rem);
-  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-}
-
-.hero-eyebrow,
-.section-label {
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  max-width: 10ch;
-}
-
-.hero-description {
-  max-width: 52ch;
-  font-size: 1.125rem;
-}
-
-.hero-visual {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1;
-  border: 3px solid var(--fg);
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: var(--primary-fg);
-  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
-  font-size: clamp(3rem, 10vw, 7rem);
-  font-weight: 700;
 }
 
 .sobre-historia {

@@ -250,57 +250,57 @@ textarea {
 /* === footer === */
 
 .footer {
-	display: grid;
-	grid-template-columns: 1fr auto;
-	border: 3px solid var(--fg);
-	border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 3px solid var(--fg);
+  border-radius: var(--radius);
 
-	margin: 2rem;
-	margin-top: auto;
+  margin: 2rem;
+  margin-top: auto;
 }
 
 .footer-info {
-	display: flex;
-	flex-direction: column;
-	gap: 0.125rem;
-	font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  font-style: normal;
 }
 
 .footer-info a {
-	width: fit-content;
-	color: var(--card-fg);
+  width: fit-content;
+  color: var(--card-fg);
 }
 
 .footer .button {
-	background-color: var(--accent);
+  background-color: var(--accent);
 }
 
 .footer .button:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .footer-logo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	font-size: 1rem;
-	font-weight: 700;
-	margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 
 .footer-copy {
-	grid-column: span 2;
-	width: 100%;
-	text-align: center;
-	opacity: 0.7;
-	font-size: 0.75rem;
+  grid-column: span 2;
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.75rem;
 }
 
 @media (width < 420px) {
-	.footer {
-		display: flex;
-		flex-direction: column;
-	}
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* === home-banner === */
@@ -424,7 +424,7 @@ a.button:hover {
   padding: 1.5rem;
 }
 
-.processo-lista li > span {
+.processo-lista li>span {
   display: grid;
   place-items: center;
   flex: 0 0 3rem;
@@ -447,13 +447,13 @@ a.button:hover {
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
 }
 
-.sobre-comunidade > div {
+.sobre-comunidade>div {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.sobre-equipe > p {
+.sobre-equipe>p {
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
 }
@@ -512,5 +512,107 @@ a.button:hover {
 /* === servicos === */
 
 /* === contato === */
+
+.contato {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem 1rem 5rem;
+}
+
+.vamos-conversar {
+  width: fit-content;
+  background-color: var(--accent);
+  padding: 8px;
+  font-weight: bold;
+}
+
+.titulo {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.titulo h1 {
+  font-size: xxx-large;
+}
+
+.titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent);
+}
+
+.card-contato {
+  display: flex;
+  gap: 1.25rem;
+  border: 3px solid var(--fg);
+  color: var(--card-fg);
+  padding: 1rem;
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
+  transition: .3s;
+}
+
+.card-contato:hover {
+  transform: translate(var(--shadow-x), var(--shadow-y));
+  box-shadow: none;
+}
+
+.card-contato-svg {
+  background-color: var(--accent);
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--fg);
+}
+
+.contato-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form {
+  background-color: var(--accent);
+  border: 3px solid var(--fg);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
+  padding: 2rem 3rem;
+  flex: 1;
+}
+
+.form-title {
+  width: fit-content;
+  background-color: var(--secondary);
+  padding: 8px;
+  font-weight: bold;
+  border: 3px solid var(--fg);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--fg);
+}
+
+.contato-input {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-wrapper label {
+  cursor: pointer;
+}
 
 /* === dark-theme === */

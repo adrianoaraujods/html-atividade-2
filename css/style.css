@@ -337,6 +337,7 @@ header {
   .hero .hero-visual {
     display: none;
   }
+
   .hero-visual .logo-hero {
     display: none;
   }
@@ -402,13 +403,77 @@ header {
 
 /* === home-galeria === */
 
+.home-galeria {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem 1rem 5rem;
+  margin-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.galeria-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.galeria-titulo {
+  width: fit-content;
+  background-color: var(--accent);
+  padding: 8px;
+  font-weight: bold;
+  border: 3px solid var(--fg);
+}
+
+.galeria-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1em;
+
+}
+
+.galeria-card{
+  width: 100%;
+}
+
+.galeria-card figure{
+  overflow: hidden;
+  border: 3px solid var(--fg);
+  border-radius: var(--radius);
+  aspect-ratio: 1 / 1;
+}
+
+.galeria-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.galeria-card p {
+  font-size: x-small;
+}
+.card-title h3{
+  font-size: small;
+}
+
+.card-title{
+  background-color: var(--accent);
+    border: 2px solid var(--fg);
+    padding: 5px;
+
+}
+
 /* === home-depoimentos === */
 
 .home-depoimentos {
   padding: 3rem 1rem 5rem;
 }
 
-.home-depoimentos .section-heading > p:last-child {
+.home-depoimentos .section-heading>p:last-child {
   max-width: 60ch;
   font-size: 1.125rem;
 }
@@ -646,6 +711,7 @@ a.button:hover {
   padding: 1.5rem;
 }
 
+
 .processo-lista li > span {
   display: grid;
   place-items: center;
@@ -754,7 +820,7 @@ a.button:hover {
   gap: 1rem;
 }
 
-.servicos-apresentacao-conteudo > p:last-child {
+.servicos-apresentacao-conteudo>p:last-child {
   max-width: 65ch;
   font-size: 1.125rem;
 }
@@ -772,7 +838,7 @@ a.button:hover {
   height: auto;
 }
 
-.servicos-apresentacao > p:last-child {
+.servicos-apresentacao>p:last-child {
   max-width: 65ch;
   font-size: 1.125rem;
 }
@@ -786,7 +852,7 @@ a.button:hover {
   max-width: 100%;
 }
 
-.servicos-jogos > h2 {
+.servicos-jogos>h2 {
   margin-bottom: 1.5rem;
 }
 
@@ -828,7 +894,7 @@ a.button:hover {
   font-size: 1.5rem;
 }
 
-.servicos-areas > h2 {
+.servicos-areas>h2 {
   margin-bottom: 1.5rem;
 }
 

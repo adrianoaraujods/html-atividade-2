@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PD Games — Exemplo de Componentes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { display: flex; flex-direction: column; gap: 2rem; padding-block: 4rem; }
+    section { display: flex; flex-direction: column; gap: 1rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; border-bottom: 3px solid var(--fg); padding-bottom: 0.25rem; }
+    .row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+  </style>
+</head>
+<body>
+  <h1>PD Games — Componentes</h1>
+
+  <section>
+    <h2>Card</h2>
+    <div class="card">
+      <div>
+        <div class="card-title">Título do Card</div>
+        <div class="card-subtitle">Subtítulo com descrição adicional</div>
+      </div>
+      <p>Conteúdo do card. Aqui cabe texto, imagens ou outros componentes.</p>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <div class="card-title">Card Pequeno</div>
+        <div class="card-subtitle">Subtítulo</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Outro Card</div>
+        <div class="card-subtitle">Subtítulo</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Mais Um</div>
+        <div class="card-subtitle">Subtítulo</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Botões</h2>
+    <div class="row">
+      <button type="button">Habilitado</button>
+      <button type="button" disabled>Desabilitado</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Inputs</h2>
+    <div class="row">
+      <input type="text" placeholder="Nome">
+      <input type="email" placeholder="E-mail">
+    </div>
+    <div class="row">
+      <input type="text" placeholder="Desabilitado" disabled>
+      <select>
+        <option>Opção 1</option>
+        <option>Opção 2</option>
+        <option>Opção 3</option>
+      </select>
+    </div>
+    <textarea placeholder="Mensagem"></textarea>
+  </section>
+
+  <section>
+    <h2>Card + Formulário</h2>
+    <div class="card">
+      <div class="card-title">Entre em Contato</div>
+      <div class="card-subtitle">Preencha os campos abaixo</div>
+      <input type="text" placeholder="Seu nome">
+      <input type="email" placeholder="Seu e-mail">
+      <textarea placeholder="Sua mensagem"></textarea>
+      <button type="button">Enviar</button>
+    </div>
+  </section>
+</body>
+</html>

@@ -188,10 +188,10 @@ textarea {
 
 /* === header === */
 
-.navbar {
-	position: sticky;
-	top: 0;
-	z-index: 10;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar {
@@ -402,6 +402,132 @@ textarea {
 
 /* === home-depoimentos === */
 
+.home-depoimentos {
+  padding: 3rem 1rem 5rem;
+}
+
+.home-depoimentos .section-heading > p:last-child {
+  max-width: 60ch;
+  font-size: 1.125rem;
+}
+
+.depoimentos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.depoimento-card {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.depoimento-card::before {
+  content: "“";
+  position: absolute;
+  top: -1.5rem;
+  right: 0.75rem;
+  font-size: 7rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.depoimento-card:nth-child(1) {
+  background-color: var(--card);
+}
+
+.depoimento-card:nth-child(2) {
+  background-color: var(--secondary);
+}
+
+.depoimento-card:nth-child(3) {
+  background-color: var(--accent);
+}
+
+.depoimento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 9px 0 var(--fg);
+}
+
+.depoimento-estrelas {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+
+.depoimento-texto {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.depoimento-pessoa {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 3px solid var(--fg);
+}
+
+.depoimento-avatar {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.depoimentos-img {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  max-width: none;
+  object-fit: cover;
+  border: 3px solid var(--fg);
+  border-radius: 50%;
+  background-color: var(--bg);
+  box-shadow: 3px 3px 0 var(--fg);
+}
+
+.depoimento-pessoa .card-title {
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 820px) {
+  .depoimentos-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .depoimento-card {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .depoimento-card {
+    transition: none;
+  }
+
+  .depoimento-card:hover {
+    transform: none;
+  }
+}
+
 /* === sobre === */
 
 a.button:hover {
@@ -607,51 +733,51 @@ a.button:hover {
 /* === servicos === */
 
 .servicos {
-	display: flex;
-	flex-direction: column;
-	gap: 4rem;
-	padding: 3rem 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 1rem 5rem;
 }
 
 .servicos-apresentacao {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
-	align-items: center;
-	gap: 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 3rem;
 }
 
 .servicos-apresentacao-conteudo {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .servicos-apresentacao-conteudo > p:last-child {
-	max-width: 65ch;
-	font-size: 1.125rem;
+  max-width: 65ch;
+  font-size: 1.125rem;
 }
 
 .logo-grande {
-	display: grid;
-	place-items: center;
-	justify-self: end;
-	margin: 0;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  margin: 0;
 }
 
 .logo-grande svg {
-	display: block;
-	width: clamp(9rem, 15vw, 14rem);
-	height: auto;
+  display: block;
+  width: clamp(9rem, 15vw, 14rem);
+  height: auto;
 }
 
 .servicos-apresentacao > p:last-child {
-	max-width: 65ch;
-	font-size: 1.125rem;
+  max-width: 65ch;
+  font-size: 1.125rem;
 }
 
 .servicos-texto-apresentacao {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .servicos-texto-apresentacao p {
@@ -659,62 +785,62 @@ a.button:hover {
 }
 
 .servicos-jogos > h2 {
-	margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .jogos-lista {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .jogo-card {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .jogo-card figure {
-	overflow: hidden;
-	border: 3px solid var(--fg);
-	border-radius: var(--radius);
+  overflow: hidden;
+  border: 3px solid var(--fg);
+  border-radius: var(--radius);
 }
 
 .jogo-card img {
-	display: block;
-	width: 100%;
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
-	transition: transform 0.2s;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.2s;
 }
 
 .jogo-card:hover img {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .jogo-card .card-subtitle {
-	color: var(--primary);
-	font-weight: 700;
-	opacity: 1;
+  color: var(--primary);
+  font-weight: 700;
+  opacity: 1;
 }
 
 .jogo-card .card-title {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .servicos-areas > h2 {
-	margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .servicos-lista {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .servicos-compromisso,
 .aviso-ficticio {
-	border: 3px solid var(--fg);
-	border-radius: var(--radius);
-	padding: 2rem;
+  border: 3px solid var(--fg);
+  border-radius: var(--radius);
+  padding: 2rem;
 }
 
 .servicos-compromisso {
@@ -724,19 +850,19 @@ a.button:hover {
 }
 
 .servicos-compromisso h2 {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
-	.servicos {
-		gap: 3rem;
-		padding-top: 1.5rem;
-	}
+  .servicos {
+    gap: 3rem;
+    padding-top: 1.5rem;
+  }
 
-	.jogos-lista,
-	.servicos-lista {
-		grid-template-columns: 1fr;
-	}
+  .jogos-lista,
+  .servicos-lista {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* === contato === */

@@ -530,6 +530,7 @@ a.button:hover {
   position: relative;
   display: inline-block;
   margin-bottom: 2rem;
+  z-index: -1;
 }
 
 .titulo h1 {
@@ -614,5 +615,31 @@ a.button:hover {
 .form-wrapper label {
   cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+  .contato {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vamos-conversar {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--accent);
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  .titulo h1{
+    font-size: xx-large;
+  }
+}
+
+
 
 /* === dark-theme === */

@@ -245,8 +245,15 @@ header {
   color: var(--secondary-fg);
 }
 
+
 @media (width < 680px) {
+  header {
+    position: static;
+  }
+
   .navbar {
+    position: static;
+    margin: 1rem;
     flex-direction: column;
     align-items: stretch;
   }

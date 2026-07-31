@@ -245,15 +245,22 @@ header {
 	color: var(--secondary-fg);
 }
 
-@media (width < 680px) {
-	.navbar {
-		flex-direction: column;
-		align-items: stretch;
-	}
 
-	.navbar nav ul {
-		flex-direction: column;
-	}
+@media (width < 680px) {
+  header {
+    position: static;
+  }
+
+  .navbar {
+    position: static;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+  }
 }
 
 /* === hero section === */

@@ -425,20 +425,20 @@ header {
 
 .galeria-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15em , 2fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 1em;
 
 }
 
 .galeria-card{
-  width: 225px;
-
+  width: 100%;
 }
 
 .galeria-card figure{
   overflow: hidden;
   border: 3px solid var(--fg);
   border-radius: var(--radius);
+  aspect-ratio: 1 / 1;
 }
 
 .galeria-card img {

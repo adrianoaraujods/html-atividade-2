@@ -464,7 +464,58 @@ header {
   background-color: var(--accent);
     border: 2px solid var(--fg);
     padding: 5px;
+}
 
+@media (max-width: 900px) {
+  .galeria-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-galeria {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-galeria {
+    gap: 2rem;
+    padding: 1rem 1rem 3rem;
+  }
+
+  .galeria-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .galeria-header .button {
+    width: 100%;
+  }
+
+  .galeria-header > div:last-child {
+    width: 100%;
+  }
+
+  .galeria-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-card figure {
+    aspect-ratio: 16 / 10;
+  }
+
+  .galeria-card img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .galeria-card p {
+    font-size: 0.875rem;
+  }
+
+  .card-title h3 {
+    font-size: 1rem;
+  }
 }
 
 /* === home-depoimentos === */
